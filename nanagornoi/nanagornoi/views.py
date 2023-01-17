@@ -2,8 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-def home_page(request):
-    return render(request, 'home.html', {'greeting': 'HTMl файл основного тела страницы'})
+
 
 
 def steering_racks_page(request):

@@ -38,6 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home_page.apps.HomePageConfig',
+    'steering_racks.apps.SteeringRacksConfig',
+    'turning_services.apps.TurningServicesConfig',
+    'other.apps.OtherConfig',
+    'location.apps.LocationConfig',
+    'contacts.apps.ContactsConfig',
+    'about.apps.AboutConfig',
+    'blog.apps.BlogConfig'
+
 ]
 
 MIDDLEWARE = [

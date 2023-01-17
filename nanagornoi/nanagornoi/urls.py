@@ -19,12 +19,13 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', 'home_page.urls', {}),  # Домашняя страница
-    path('steering_racks/', views.steering_racks_page),  # Страница ремонт рулевых реек
-    path('turning_services/', views.turning_services_page),  # Страница токарных услуг
-    path('other/', views.other_page),  # Страница прочие услуги
-    path('location/', views.location_page),  # Страница с описанием местонахождения
-    path('contacts/', views.contacts_page),  # Страница контакты
-    path('about/', views.about_page)  # Страница 'О нас'
+    path('', include('home_page.urls')),  # Домашняя страница
+    path('steering_racks/', include('steering_racks.urls')),  # Страница ремонт рулевых реек
+    path('turning_services/', include('turning_services.urls')),  # Страница токарных услуг
+    path('other/', include('other.urls')),  # Страница прочие услуги
+    path('location/', include('location.urls')),  # Страница с описанием местонахождения
+    path('contacts/', include('contacts.urls')),  # Страница контакты
+    path('blog/', include('blog.urls')),
+    path('about/', include('about.urls'))  # Страница 'О нас'
 
 ]

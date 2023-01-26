@@ -2,9 +2,6 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-
-
-
 def steering_racks_page(request):
     return HttpResponse('Страница ремонта рулевых реек')
 

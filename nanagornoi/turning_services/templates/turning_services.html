@@ -1,6 +1,8 @@
 {% extends 'home.html' %}
+{% load static %}
 {% block page_content %}
 <h2>
-    Страница о токарке
+    <img src="{% static 'images/banner_turning_services.png' %}" alt="Верхний большой баннер">
+    <img src="{% static 'images/general_img_turning_services.png' %}" alt="Главная информация на странице">
 </h2>
 {% endblock %}

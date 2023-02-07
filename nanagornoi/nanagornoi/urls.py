@@ -22,10 +22,7 @@ urlpatterns = [
     path('', include('home_page.urls')),  # Домашняя страница
     path('steering_racks/', include('steering_racks.urls')),  # Страница ремонт рулевых реек
     path('turning_services/', include('turning_services.urls')),  # Страница токарных услуг
-    path('other/', include('other.urls')),  # Страница прочие услуги
     path('location/', include('location.urls')),  # Страница с описанием местонахождения
     path('contacts/', include('contacts.urls')),  # Страница контакты
     path('blog/', include('blog.urls')),
-    path('about/', include('about.urls'))  # Страница 'О нас'
-
 ]

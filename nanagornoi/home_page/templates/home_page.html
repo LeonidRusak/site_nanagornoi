@@ -4,95 +4,64 @@
 <!-- Блок отвечающий за карусель -->
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active"
+                aria-current="false"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="{% static 'images/carousel_1.png' %}" alt="Баннер карусели 1"></svg>
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>ПРОСТО!</h1>
-            <p>С НАМИ ОЧЕНЬ ЛЕГКО СВЯЗАТЬСЯ</p>
-            <p><a class="btn btn-lg btn-primary" href="http://127.0.0.1:8000/contacts/">ПОЗВОНИТЬ</a></p>
-          </div>
+        <div class="carousel-item">
+            <p class="d-flex justify-content-center py-3"><img src="{% static 'images/carousel_1.png' %}"
+                                                               alt="Баннер карусели 1"></p>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>ПРОСТО!</h1>
+                    <p><b>С НАМИ ОЧЕНЬ ЛЕГКО СВЯЗАТЬСЯ</b></p>
+                    <p><a class="btn btn-lg btn-primary" href="http://127.0.0.1:8000/contacts/">ПОЗВОНИТЬ</a></p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="{% static 'images/carousel_2.png' %}" alt="Баннер карусели 2"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>БЫСТРО!</h1>
-            <p>СТО РАСПОЛОЖЕНО В ОЧЕНЬ УДОБНОМ МЕСТЕ</p>
-            <p><a class="btn btn-lg btn-primary" href="http://127.0.0.1:8000/location/">МЫ ТУТ!</a></p>
-          </div>
+        <div class="carousel-item active">
+            <p class="d-flex justify-content-center py-3"><img src="{% static 'images/carousel_2.png' %}"
+                                                               alt="Баннер карусели 2"></p>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>БЫСТРО!</h1>
+                    <p><b>СТО РАСПОЛОЖЕНО В ОЧЕНЬ УДОБНОМ МЕСТЕ</b></p>
+                    <p><a class="btn btn-lg btn-primary" href="http://127.0.0.1:8000/location/">МЫ ТУТ!</a></p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="{% static 'images/carousel_3.png' %}" alt="Баннер карусели 3"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>КАЧЕСТВЕННО!</h1>
-            <p>БОЛЬШОЙ ОПЫТ РАБОТЫ С РАЗЛИЧНЫМИ АВТОМОБИЛЯМИ</p>
-            <p><a class="btn btn-lg btn-primary" href="http://127.0.0.1:8000/blog/">НАШ БЛОГ</a></p>
-          </div>
+        <div class="carousel-item">
+            <p class="d-flex justify-content-center py-3"><img src="{% static 'images/carousel_3.png' %}"
+                                                               alt="Баннер карусели 3"></p>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>КАЧЕСТВЕННО!</h1>
+                    <p><b>БОЛЬШОЙ ОПЫТ РАБОТЫ С РАЗЛИЧНЫМИ АВТОМОБИЛЯМИ</b></p>
+                    <p><a class="btn btn-lg btn-primary" href="http://127.0.0.1:8000/blog/">НАШ БЛОГ</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
     </button>
-  </div>
+</div>
 <!-- Текстовый блок -->
-<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 py-3">
-        <h2 class="display-5">Отремонтируем рулевую рейку</h2>
-        <p class="lead">Рули по жизни!</p>
-      </div>
-      <div class="text-bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-          <h4 class="display-5">Что-то умное должно быть здесь!</h4>
-          <button class="btn btn-outline-dark" type="button">Example button</button>
+<div class="px-4 py-3 my-5 text-center">
+    <h1 class="display-4 fw-bold">ЛЮФТ РУЛЕВОГО КОЛЕСА?</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Плохо управляется авто?</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <p><a class="btn btn-lg btn-primary" href="http://127.0.0.1:8000/blog/">ЗАПИСАТЬСЯ НА РЕМОНТ</a></p>
       </div>
     </div>
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Выточим хоть космический корабль!</h2>
-        <p class="lead">А почему бы и нет?</p>
-      </div>
-      <div class="text-bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-          <h4 class="display-5">Текст рыба карась игра началась!</h4>
-          <button class="btn btn-outline-light" type="button">Example button</button>
-      </div>
-    </div>
-  </div>
-<br>
-<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 py-3">
-        <h2 class="display-5">А мы еще много чего умеем!</h2>
-        <p class="lead">Например накачать колесо! Воздухом! Со вкусом клубнички!</p>
-      </div>
-      <div class="text-bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-          <h4 class="display-5">Что-то умное должно быть!</h4>
-          <button class="btn btn-outline-dark" type="button">Example button</button>
-      </div>
-    </div>
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Все еще думаешь? Зря! Точно!</h2>
-        <p class="lead"> Босс уже знает когда записать тебя!</p>
-      </div>
-      <div class="text-bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-          <h4 class="display-5">Что-то я разошелся!</h4>
-          <button class="btn btn-outline-light" type="button">Example button</button>
-      </div>
-    </div>
-  </div>
+</div>
+
 {% endblock %}

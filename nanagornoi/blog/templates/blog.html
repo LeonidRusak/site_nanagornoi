@@ -1,7 +1,9 @@
+<!-- html шаблон страницы блога -->
+
 {% extends 'home.html' %}
 {% load static %}
 {% block page_content %}
-<p class="d-lg-flex justify-content-center py-3">
+<p class="d-lg-flex justify-content-center">
     <img src="{% static 'images/banner_blog.png' %}" alt="Верхний большой баннер">
 </p>
 <div class="container py-0">
@@ -29,7 +31,7 @@
     </div>
     {% endfor %}
 </div>
-<nav aria-label="Page navigation example">
+<nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
         {% for page in page_obj.paginator.page_range %}
         <li class="page-item" aria-current="page"><a class="page-link" href="?page={{ page }}">{{ page }}</a>

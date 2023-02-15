@@ -1,21 +1,23 @@
+<!-- html шаблон страницы отображения полного поста блога -->
+
 {% extends 'home.html' %}
 {% load static %}
 {% block page_content %}
 <div class="col-md-8 offset-md-2">
-  <h1>{{ post.title }}</h1>
-  <small>
-    {{ post.created_on.date }} |&nbsp;
-    Категории:&nbsp;
-    {% for category in post.categories.all %}
-    <a href="{% url 'blog_category' category.name %}">
-      {{ category.name }}
-    </a>&nbsp;
-    {% endfor %}
-  </small>
-  <p class="d-lg-flex justify-content-center py-3">
-    <img src="{{ post.post_img.url }}" width="400" height="400" alt="Фото поста">
-  </p>
-  <p>{{ post.body | linebreaks }}</p>
-  <input type="button" onclick="history.back();" value="Назад"/>
+    <h1>{{ post.title }}</h1>
+    <small>
+        {{ post.created_on.date }} |&nbsp;
+        Категории:&nbsp;
+        {% for category in post.categories.all %}
+        <a href="{% url 'blog_category' category.name %}">
+            {{ category.name }}
+        </a>&nbsp;
+        {% endfor %}
+    </small>
+    <p class="d-lg-flex justify-content-center py-3">
+        <img src="{{ post.post_img.url }}" width="400" height="400" alt="Фото поста">
+    </p>
+    <p>{{ post.body | linebreaks }}</p>
+    <input type="button" onclick="history.back();" value="Назад"/>
 </div>
 {% endblock %}

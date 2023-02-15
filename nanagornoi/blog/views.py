@@ -1,23 +1,11 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
-from .models import Post, Comment
-from .forms import CommentForm
+from .models import Post, Category
 
 
 # Create your views here.
-def blog_page(request):
-    posts = Post.objects.all().order_by('-created_on')
-    context = {
-        'posts': posts,
-    }
-    return render(request, 'blog.html', context)
-
-
 def blog_category(request, category):
-    posts = Post.objects.filter(
-        categories__name__contains=category
-    ).order_by(
-        'created_on'
-    )
+    posts = Post.objects.filter(categories__name__contains=category).order_by('-created_on')
     context = {
         'category': category,
         'posts': posts
@@ -27,21 +15,15 @@ def blog_category(request, category):
 
 def blog_detail(request, pk):
     post = Post.objects.get(pk=pk)
-    form = CommentForm
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            comment = Comment(
-                author=form.cleaned_data['author'],
-                body=form.cleaned_data['body'],
-                post=post
-            )
-            comment.save()
-
-    comments = Comment.objects.filter(post=post)
     context = {
         'post': post,
-        'comments': comments,
-        'form': form,
     }
     return render(request, 'blog_detail.html', context)
+
+
+def blog_page(request):
+    contact_list = Post.objects.all().order_by('-created_on')
+    paginator = Paginator(contact_list, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'blog.html', {'page_obj': page_obj, })

@@ -2,36 +2,42 @@
 {% load static %}
 {% block page_content %}
 <h2>
-    <img src="{% static 'images/banner_contacts.png' %}" alt="Верхний большой баннер">
-    <dl class="row">
-        <dt class="col-sm-3">Наши номера телефонов:</dt>
-        <dd class="col-sm-9"><br>+3752999999999999(Вадим)</dd>
-
-        <dt class="col-sm-3"></dt>
-        <dd class="col-sm-9">
-            <p>+375293333333 (Александр)</p>
-            <p>+375291111111(Яков)</p>
-        </dd>
-        <dt class="col-sm-3">Токарные работы:</dt>
-        <dd class="col-sm-9">
-            <p>+375293333333 (Геннадий)</p>
-        </dd>
-        <dt class="col-sm-3">Мы в социальных сетях:</dt>
-        <dd class="col-sm-9"><br>Инстаграмм</dd>
-
-        <dt class="col-sm-3 text-truncate"></dt>
-        <dd class="col-sm-9">Вайбер</dd>
-
-        <dt class="col-sm-3 text-truncate"></dt>
-        <dd class="col-sm-9">Телеграмм</dd>
-
-        <dt class="col-sm-3">Остались вопросы?</dt>
-        <dd class="col-sm-9">
-            <dl class="row">
-                <dt class="col-sm-4">Напишите нам!</dt>
-                <dd class="col-sm-8">Адрес электронной почты</dd>
-            </dl>
-        </dd>
-    </dl>
+    <p class="d-lg-flex justify-content-center py-3">
+        <img src="{% static 'images/banner_contacts.png' %}" alt="Верхний большой баннер">
+    </p>
+    <div class="container">
+        <div class="row text-center pt-2">
+            <div>
+                    <p>НАШИ НОМЕРА ТЕЛЕФОНОВ:</p>
+                    <p><a href="tel:+375292165496" target="_blank">+375292165496</a> (Вадим)</p>
+                    <p><a href="tel:+375297813243" target="_blank">+375297813243</a> (Александр)</p>
+                    <p><a href="tel:+375445750967" target="_blank">+375445750967</a> (Яков)</p>
+                    <p>Токарные работы:</p>
+                    <p><a href="tel:+375292818689" target="_blank">+375292818689</a> (Геннадий)</p>
+            </div>
+            <div>
+                <p>РЕЖИМ РАБОТЫ:</p>
+                <p>Рабочие дни: ПН-ПТ 9.00-19.00</p>
+                <p>Перерыв: 13.30-14.00</p>
+            </div>
+            <div>
+                <p>МЫ В СОЦИАЛЬНЫХ СЕТЯХ:</p>
+            </div>
+        </div>
+    </div>
 </h2>
+<div class="text-center">
+    <a target="_blank" href="https://www.instagram.com/nanagornoi/">
+				<span><img src="{% static 'images/inst.png' %}" alt="instagram"></span>
+    </a>
+    <a target="_blank" href="https://t.me/+375292165496">
+				<span><img src="{% static 'images/teleg.png' %}" alt="telegram"></span>
+    </a>
+    <a target="_blank" href="viber://chat?number=375292165496">
+				<span><img src="{% static 'images/viber.png' %}" alt="viber"></span>
+    </a>
+    <a target="_blank" href="mailto:vadimloiko89@gmail.com">
+				<span><img src="{% static 'images/email.png' %}" alt="email"></span>
+    </a>
+</div>
 {% endblock %}

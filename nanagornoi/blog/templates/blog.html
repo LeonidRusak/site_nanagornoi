@@ -1,21 +1,40 @@
 {% extends 'home.html' %}
 {% load static %}
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
-    <h1>Блог</h1>
-    <hr>
-    {% for post in posts %}
-    <h2><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h2>
-    <small>
-        {{ post.created_on.date }} |&nbsp;
-        Категории:&nbsp;
-        {% for category in post.categories.all %}
-        <a href="{% url 'blog_category' category.name %}">
-            {{ category.name }}
-        </a>&nbsp;
-        {% endfor %}
-    </small>
-    <p>{{ post.body }}...</p>
+<p class="d-lg-flex justify-content-center py-3">
+    <img src="{% static 'images/banner_blog.png' %}" alt="Верхний большой баннер">
+</p>
+<div class="container py-0">
+    {% for post in page_obj %}
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-7 fw-bold"><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h1>
+            <small>
+                {{ post.created_on.date }} |&nbsp;
+                Категории:&nbsp;
+                {% for category in post.categories.all %}
+                <a href="{% url 'blog_category' category.name %}">
+                    {{ category.name }}
+                </a>&nbsp;
+                {% endfor %}
+                <br>
+                <p class="d-lg-flex justify-content-center py-3">
+                    <img src="{{ post.post_img.url }}" width="400" height="400" alt="Фото поста">
+                </p>
+                <span class="d-inline-block text-truncate" style="max-width: 400px;">{{ post.body }}</span>
+            </small>
+
+            <p><a class="btn btn-primary btn-lg" href="{% url 'blog_detail' post.pk %}">Показать полностью</a></p>
+        </div>
+    </div>
     {% endfor %}
 </div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        {% for page in page_obj.paginator.page_range %}
+        <li class="page-item" aria-current="page"><a class="page-link" href="?page={{ page }}">{{ page }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
 {% endblock %}

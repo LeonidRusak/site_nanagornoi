@@ -2,26 +2,34 @@
 {% load static %}
 {% block page_content %}
 <h2>
-    <img src="{% static 'images/banner_location.png' %}" alt="Верхний большой баннер">
-    <figure>
-        <blockquote class="blockquote">
-            <p>Мы находимся по адресу:</p>
-        </blockquote>
-        <figcaption>
-            Слоним, <cite title="Source Title">переулок 1-й Нагорный д.15</cite>
-        </figcaption>
-    </figure>
-    <h6>
-            <figure>
-        <blockquote class="blockquote">
-            <p>Наши координаты:</p>
-        </blockquote>
-        <figcaption>
-            <cite title="Source Title">53.05536849012924, 25.34703657650638</cite>
-        </figcaption>
-    </figure>
-    </h6>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.472491738086!2d25.34549564993116!3d53.05434667558207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46df47cc77679a39%3A0xf60caa705b29c3c6!2z0JDQstGC0L7QvNCw0YHRgtC10YDRgdC60LDRjyBuYW5hZ29ybm9pICjRgNC10LzQvtC90YIg0YDRg9C70LXQstGL0YUg0YDQtdC10Lop!5e0!3m2!1sru!2sby!4v1675329659874!5m2!1sru!2sby" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+    <p class="d-lg-flex justify-content-center py-3">
+        <img src="{% static 'images/banner_location.png' %}" alt="Верхний большой баннер">
+    </p>
+    <div class="container">
+        <div class="row text-center pt-2">
+            <div>
+                <address>
+                    <p>НАШ АДРЕС:</p>
+                    <p>Беларусь</p>
+                    <p>г. Слоним</p>
+                    <p>пер. 1-й Нагорный, д. 16</p>
+                </address>
+            </div>
+            <div>
+                <p>НАШИ КООРДИНАТЫ:</p>
+                <p><a href="https://www.google.com/maps/search/53.055104,+25.346350" target="_blank">53.055104, 25.346350</a></p>
+            </div>
+            <div>
+                <p>РЕЖИМ РАБОТЫ:</p>
+                <p>Рабочие дни: ПН-ПТ 9.00-19.00</p>
+                <p>Перерыв: 13.30-14.00</p>
+            </div>
+        </div>
+    </div>
+    <p class="d-flex justify-content-center py-3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.472491738086!2d25.34549564993116!3d53.05434667558207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46df47cc77679a39%3A0xf60caa705b29c3c6!2z0JDQstGC0L7QvNCw0YHRgtC10YDRgdC60LDRjyBuYW5hZ29ybm9pICjRgNC10LzQvtC90YIg0YDRg9C70LXQstGL0YUg0YDQtdC10Lop!5e0!3m2!1sru!2sby!4v1675329659874!5m2!1sru!2sby"
+                width="1000" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </p>
 </h2>
 {% endblock %}
